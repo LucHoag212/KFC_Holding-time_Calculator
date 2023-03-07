@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC Hoding-time Calculator</title>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/vi/thumb/7/7e/Logo_KFC.svg/1200px-Logo_KFC.svg.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="Images/Banner.png" alt="banner" class="ImageChange">
+    </header>
+    <form style="text-align: center;">
+        <label for="num1">Nhập i:</label>
+        <input type="number" id="num1" name="num1"><br><br>
+        <label for="num2">Nhập tr:</label>
+        <input type="number" id="num2" name="num2"><br><br>
+        <label for="num2">Nhập m:</label>
+        <input type="number" id="num3" name="num3"><br><br>
+        <input type="button" value="Tính toán" onclick="calculate()">
+    </form>
+    <p id="result"></p>
+    <script>
+        function calculate() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let sum = parseInt(num1) + parseInt(num2);
+            let diff = parseInt(num1) - parseInt(num2);
+            document.getElementById("result").innerHTML = "r: " + sum + "<br>e: " + diff;
+        }
+    </script>
+</body>
+
+</html>
